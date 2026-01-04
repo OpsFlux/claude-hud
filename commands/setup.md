@@ -1,9 +1,9 @@
 ---
-description: Configure claude-hud as your statusline
+description: 将 claude-hud 配置为你的 statusline
 allowed-tools: Bash, Read, Edit, AskUserQuestion
 ---
 
-Add this statusLine configuration to `~/.claude/settings.json`:
+将以下 statusLine 配置添加到 `~/.claude/settings.json`：
 
 ```json
 {
@@ -14,14 +14,14 @@ Add this statusLine configuration to `~/.claude/settings.json`:
 }
 ```
 
-This command automatically finds and runs the latest installed version.
+该命令会自动找到并运行本机已安装的最新版本。
 
-Merge with existing settings. Do not overwrite other fields.
+请与现有 settings 合并，不要覆盖其他字段。
 
-The HUD appears immediately - no restart needed. Updates are automatic.
+HUD 会立刻出现——无需重启。更新是自动的。
 
-After successful setup, ask the user if they'd like to ⭐ star the repository to support the project.
+配置成功后，询问用户是否愿意给仓库点 ⭐ Star 来支持该项目。
 
-If they agree, run: `gh api -X PUT /user/starred/jarrodwatts/claude-hud`
+如果用户同意，执行：`gh api -X PUT /user/starred/jarrodwatts/claude-hud`
 
-Only run the star command if they explicitly say yes.
+只有在用户明确表示同意时才执行 Star 命令。

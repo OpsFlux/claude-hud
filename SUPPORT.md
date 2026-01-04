@@ -1,16 +1,16 @@
-# Support Policy
+# 支持政策
 
-This project is maintained on a best-effort basis.
+本项目以“尽力而为”的方式进行维护。
 
-## What We Support
+## 支持范围
 
-- The latest release
-- Claude Code versions documented in `README.md`
-- Node.js 18+ or Bun
+- 最新发布版本
+- `README.md` 中注明的 Claude Code 版本
+- Node.js 18+ 或 Bun
 
-## How to Get Help
+## 如何获取帮助
 
-- Open a GitHub issue for bugs or feature requests
-- For security issues, see `SECURITY.md`
+- 如有 bug 或功能需求，请提交 GitHub issue
+- 安全相关问题请参见 `SECURITY.md`
 
-We cannot guarantee response times, but we will triage issues as time allows.
+我们无法保证响应时效，但会在时间允许的情况下对问题进行分流与处理。

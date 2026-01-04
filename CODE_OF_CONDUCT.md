@@ -1,31 +1,31 @@
-# Code of Conduct
+# 行为准则
 
-## Our Pledge
+## 我们的承诺
 
-We pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socioeconomic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
+我们承诺让每个人在参与本社区时都能获得无骚扰的体验，不论其年龄、体型、可见或不可见的残障状况、族裔、性别特征、性别认同与表达、经验水平、教育程度、社会经济状况、国籍、外表、种族、宗教，或性取向与性别认同。
 
-## Our Standards
+## 我们的标准
 
-Examples of behavior that contributes to a positive environment include:
+有助于营造积极环境的行为示例包括：
 
-- Being respectful and considerate
-- Using welcoming and inclusive language
-- Accepting constructive feedback
-- Focusing on what is best for the community
+- 尊重他人、体贴周到
+- 使用友善且包容的语言
+- 接受建设性的反馈
+- 关注对社区最有利的事情
 
-Examples of unacceptable behavior include:
+不可接受的行为示例包括：
 
-- Harassment or discrimination
-- Trolling, insulting, or derogatory comments
-- Publishing others' private information without permission
+- 骚扰或歧视
+- 钓鱼、侮辱或贬损性言论
+- 未经允许发布他人的私人信息
 
-## Enforcement
+## 执行
 
-Community leaders are responsible for clarifying standards of acceptable behavior and may take appropriate action in response to unacceptable behavior.
+社区维护者负责澄清可接受行为的标准，并可针对不可接受的行为采取适当行动。
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the maintainer at: jarrodwttsyt@gmail.com.
+如遇辱骂、骚扰或其他不可接受的行为，可通过联系维护者进行举报：jarrodwttsyt@gmail.com。
 
-## Attribution
+## 来源与致谢
 
-This Code of Conduct is adapted from the Contributor Covenant, version 2.1.
+本行为准则改编自 Contributor Covenant 2.1 版。
 https://www.contributor-covenant.org/version/2/1/code_of_conduct.html

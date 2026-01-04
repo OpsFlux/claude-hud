@@ -1,16 +1,15 @@
-# Changelog
+# 更新日志
 
-All notable changes to Claude HUD will be documented in this file.
+Claude HUD 的所有重要变更都会记录在此文件中。
 
 ## [2.0.0] - 2025-01-02
 
-### Changed
-- Complete rewrite from split-pane TUI to inline statusline
-- New statusline renderer with multi-line output
-- Transcript-driven tool/agent/todo parsing
-- Native context usage from stdin JSON
+### 变更
+- 从分屏 TUI 完整重写为内联 statusline
+- 全新的 statusline 渲染器，支持多行输出
+- 基于 transcript 的 tool/agent/todo 解析
+- 从 stdin JSON 读取原生上下文使用数据
 
-### Removed
-- Hook-based capture flow
-- Split-pane UI and related components
-
+### 移除
+- 基于 Hook 的捕获流程
+- 分屏 UI 及相关组件

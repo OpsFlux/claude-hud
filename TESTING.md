@@ -1,73 +1,73 @@
-# Testing Strategy
+# 测试策略
 
-This project is small, runs in a terminal, and is mostly deterministic. The testing strategy focuses on fast, reliable checks that validate core behavior and provide a safe merge gate for PRs.
+本项目规模较小、运行于终端环境，且大多数行为是确定性的。本测试策略侧重于快速、可靠的检查，用于验证核心行为，并为 PR 提供安全的合并门槛。
 
-## Goals
+## 目标
 
-- Validate core logic (parsing, aggregation, formatting) deterministically.
-- Catch regressions in the HUD output without relying on manual review.
-- Keep test execution fast (<5s) to support frequent contributor runs.
+- 以确定性的方式验证核心逻辑（解析、聚合、格式化）。
+- 在不依赖人工审查的情况下捕获 HUD 输出的回归。
+- 保持测试执行快速（<5s），方便贡献者频繁运行。
 
-## Test Layers
+## 测试分层
 
-1) Unit tests (fast, deterministic)
-- Pure helpers: `getContextPercent`, `getModelName`, token/elapsed formatting.
-- Render helpers: string assembly and truncation behavior.
-- Transcript parsing: tool/agent/todo aggregation and session start detection.
+1) 单元测试（快、确定性强）
+- 纯辅助函数：`getContextPercent`、`getModelName`、token/耗时格式化等。
+- 渲染辅助：字符串拼接与截断行为。
+- Transcript 解析：tool/agent/todo 聚合与会话开始时间检测。
 
-2) Integration tests (CLI behavior)
-- Run the CLI with a sample stdin JSON and a fixture transcript.
-- Validate that the rendered output contains expected markers (model, percent, tool names).
-- Keep assertions resilient to minor formatting changes (avoid strict full-line matching).
+2) 集成测试（CLI 行为）
+- 使用示例 stdin JSON 与 fixture transcript 运行 CLI。
+- 验证渲染输出包含预期标记（模型、百分比、工具名等）。
+- 断言对轻微格式变化保持鲁棒（避免严格整行匹配）。
 
-3) Golden-output tests (near-term)
-- For known fixtures, compare the full output snapshot to catch subtle UI regressions.
-- Update snapshots only when intentional output changes are made.
+3) Golden-output 测试（近期规划）
+- 对已知 fixtures 对比完整输出快照，以捕获细微 UI 回归。
+- 仅在输出变更是“有意为之”时更新快照。
 
-## What to Test First
+## 优先测试内容
 
-- Transcript parsing (tool use/result mapping, todo extraction).
-- Context percent calculation (including cache tokens).
-- Truncation and aggregation (tools/todos/agents display logic).
-- Malformed or partial input (bad JSON lines, missing fields).
+- Transcript 解析（tool use/result 映射、todo 提取）。
+- 上下文百分比计算（包含 cache tokens）。
+- 截断与聚合逻辑（tools/todos/agents 的展示规则）。
+- 异常或不完整输入（错误 JSON 行、缺失字段）。
 
 ## Fixtures
 
-- Keep shared test data under `tests/fixtures/`.
-- Use small JSONL files that capture one behavior each (e.g., basic tool flow, agent lifecycle, todo updates).
+- 共享测试数据放在 `tests/fixtures/` 下。
+- 使用小型 JSONL 文件，每个文件聚焦一个行为（例如：基础工具流程、代理生命周期、todo 更新）。
 
-## Running Tests Locally
+## 本地运行测试
 
 ```bash
 npm test
 ```
 
-This runs `npm run build` and then executes Node's built-in test runner.
+该命令会先运行 `npm run build`，然后执行 Node 内置的测试运行器。
 
-To generate coverage:
+生成覆盖率：
 
 ```bash
 npm run test:coverage
 ```
 
-To update snapshots:
+更新快照：
 
 ```bash
 npm run test:update-snapshots
 ```
 
-## CI Gate (recommended)
+## CI 门禁（推荐）
 
 - `npm ci`
 - `npm run build`
 - `npm test`
 
-The provided GitHub Actions workflow runs `npm run test:coverage` on Node 18 and 20.
+仓库自带的 GitHub Actions 工作流会在 Node 18 和 20 上运行 `npm run test:coverage`。
 
-These steps should be required in PR checks to ensure new changes do not regress existing behavior.
+建议将上述步骤设为 PR 检查的必需项，以确保新变更不会回归既有行为。
 
-## Contributing Expectations
+## 贡献期望
 
-- Add or update tests for behavior changes.
-- Prefer unit tests for new helpers and integration tests for user-visible output changes.
-- Keep tests deterministic and avoid time-dependent assertions unless controlled.
+- 行为变更需新增或更新测试。
+- 新增辅助函数优先写单元测试；用户可见输出的变更优先写集成测试。
+- 保持测试确定性，避免依赖时间的断言（除非有可控手段）。

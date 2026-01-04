@@ -1,16 +1,16 @@
-# Contributing
+# 贡献指南
 
-Thanks for contributing to Claude HUD. This repo is small and fast-moving, so we optimize for clarity and quick review.
+感谢你为 Claude HUD 做出贡献。本仓库规模较小且迭代很快，因此我们更强调表述清晰与快速评审。
 
-## How to Contribute
+## 如何贡献
 
-1) Fork and clone the repo
-2) Create a branch
-3) Make your changes
-4) Run tests and update docs if needed
-5) Open a pull request
+1) Fork 并 clone 仓库
+2) 创建分支
+3) 进行修改
+4) 运行测试，并在需要时更新文档
+5) 提交 Pull Request
 
-## Development
+## 开发
 
 ```bash
 npm ci
@@ -18,18 +18,18 @@ npm run build
 npm test
 ```
 
-## Tests
+## 测试
 
-See `TESTING.md` for the full testing strategy, fixtures, and snapshot updates.
+完整的测试策略、fixtures 和快照更新方式请参见 `TESTING.md`。
 
-## Code Style
+## 代码风格
 
-- Keep changes focused and small.
-- Prefer tests for behavior changes.
-- Avoid introducing dependencies unless necessary.
+- 修改尽量聚焦且小步提交。
+- 行为变更优先补充测试。
+- 除非必要，避免引入新的依赖。
 
-## Pull Requests
+## Pull Request
 
-- Describe the problem and the fix.
-- Include tests or explain why they are not needed.
-- Link issues when relevant.
+- 描述问题与修复方案。
+- 附带测试，或说明为何不需要测试。
+- 相关时请关联对应 issue。

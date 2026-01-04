@@ -1,12 +1,12 @@
-# Security Policy
+# 安全政策
 
-## Supported Versions
+## 支持的版本
 
-Security fixes are applied to the latest release series only.
+安全修复仅会应用到最新的发布版本系列。
 
-## Reporting a Vulnerability
+## 漏洞报告
 
-Please report security issues to: jarrodwttsyt@gmail.com
+请将安全问题报告至：jarrodwttsyt@gmail.com
 
-Include a clear description, reproduction steps, and any relevant logs or screenshots.
-We will acknowledge receipt within 5 business days and provide a timeline for a fix if applicable.
+请包含清晰的问题描述、复现步骤，以及相关日志或截图。
+我们将在 5 个工作日内确认收到，并在适用时提供修复时间安排。
